@@ -1,0 +1,21 @@
+ALGORITHM insertion_sort
+VAR
+    i,j,temp: INTEGER;
+    T : ARRAY_OF INTEGER[];
+BEGIN
+ FOR l FROM 0 TO T.length STEP step  DO
+     Read(T[l]);
+ END_FOR
+
+    FOR j FROM 1 TO T.length STEP step  DO
+        temp := T[j];
+        i := j -1;
+        WHILE (j >= 0 AND T[i] > temp) DO
+            T[i+1] := T[i];
+            i := i+1;
+        END_WHILE
+     T[i+1] := temp;
+
+    END_FOR
+    Write(T); 
+END
